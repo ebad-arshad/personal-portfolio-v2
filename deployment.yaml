@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-deployment
+  labels:
+    app: next
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: next
+  template:
+    metadata:
+      labels:
+        app: next
+    spec:
+      containers:
+      - name: portfolio-deployment
+        image: ebadarshad/portfolio:latest
+        ports:
+        - containerPort: 80
