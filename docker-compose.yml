@@ -1,0 +1,7 @@
+services:
+  portfolio:
+    build: .
+    image: ebadarshad/portfolio
+    container_name: my_portfolio
+    ports:
+      - "80:80"
